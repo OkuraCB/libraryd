@@ -1,27 +1,29 @@
-# React + TypeScript + Vite
+# <span style="color: #FF7900"> How to setup a .env for the template</span>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To properly run this project on your local machine, you are require to fill up the `.env` with your own local information.
+There is in this folder a `.env.example` that you can use as a guide for a proper `.env` creation, but this README also will guide you through the process.
 
-Currently, two official plugins are available:
+## <span style="color: #A885D8">API Connection
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+All of the variables used by default on the SPA are used to make the API requests.
 
-## Expanding the ESLint configuration
+There are 3 of them: `REACT_TOKEN`, `REACT_SERVER` and `REACT_PORT`.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The `REACT_TOKEN` variable is, actually, a dummy variable that will be used for storing the jwt token on the client-side.
 
-- Configure the top-level `parserOptions` property like this:
+The other two variables are, respectively, the IP and Port where the API is listening (by default, it uses `localhost:3000`, so that's why on the example it's the default value.)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+You can set them like this:
+
+```sh
+REACT_TOKEN="{SOME_RANDOM_STRING}"
+
+REACT_SERVER="127.0.0.1"
+REACT_PORT=3000
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# <span style="color: #A885D8">How can I reach you to get support with this project?
+
+If you need help with this project or to discuss the use of one technology over another, you can email me with:
+
+- arthur-illa@hotmail.com

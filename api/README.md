@@ -1,73 +1,42 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# <span style="color: #FF7900"> How to setup a .env for the template</span>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+To properly run this project on your local machine, you are require to fill up the `.env` with your own local information.
+There is in this folder a `.env.example` that you can use as a guide for a proper `.env` creation, but this README also will guide you through the process.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## <span style="color: #A885D8">Prisma
 
-## Description
+This project uses PrismaORM for the connection between the NestJS framework and the MySQL Database
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+If you need help with the setup of the database, I would recommend using the [MariaDB](https://wiki.archlinux.org/title/MariaDB) implementation for Arch Linux. On a Windows machine, maybe you'd rather let [MySQL Workbench](https://www.mysql.com/products/workbench/) do all the work for you.
 
-## Installation
+The only variable this project uses for the Database connection is `DATABASE_URL` that can be set up like this:
 
-```bash
-$ npm install
+```sh
+DATABASE_URL="mysql://{USERNAME}:{PASSWORD}@{DB_ADDRESS}:{DB_PORT}/{DB_NAME}"
 ```
 
-## Running the app
+## <span style="color: #A885D8">JWT
 
-```bash
-# development
-$ npm run start
+This project uses the JWT method of authentication for it's reliability and customization potential.
 
-# watch mode
-$ npm run start:dev
+It also only requires one variable by default, that is a `JWT_SECRET`. It uses this secret as a way to encrypt the token, so it's recommended to use a random very strong secret.
 
-# production mode
-$ npm run start:prod
+```sh
+JWT_SECRET="{RANDOM_STRING}"
 ```
 
-## Test
+## <span style="color: #A885D8">Node
 
-```bash
-# unit tests
-$ npm run test
+This last one is optional and just is the specification of which port do you want it to listen to.
 
-# e2e tests
-$ npm run test:e2e
+It can be set up like this:
 
-# test coverage
-$ npm run test:cov
+```sh
+NODE_PORT=0000
 ```
 
-## Support
+# <span style="color: #A885D8">How can I reach you to get support with this project?
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+If you need help with this project or to discuss the use of one technology over another, you can email me with:
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- arthur-illa@hotmail.com
